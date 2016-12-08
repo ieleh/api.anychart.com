@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta name="x-cat-tags" content="pareto anyChart"/>
+    <meta charset="UTF-8"/>
+    <script src="../../anychart.min.js"></script>
+    <script x-export="chart">
+        anychart.onDocumentReady(function () {
+            chart = anychart.pareto();
+            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+
+            chart.rangeMarker({from: 2, to: 3, fill: "#2196F3 0.1", axis: chart.xAxis(0)});
+            chart.rangeMarker(1, {from: 5, to: 15, axis: chart.yAxis()});
+
+            // Disables first range marker.
+            chart.rangeMarker(false);
+
+            chart.title("Disable chart range marker");
+            chart.container("container");
+            chart.draw();
+        });
+    </script>
+</head>
+<body>
+<div id="container" style="width: 100%; height: 100%"></div>
+</body>
+</html>

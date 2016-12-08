@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <meta name="x-cat-tags" content="bar anyChart"/>
+    <meta name="x-cat-tags" content="pareto anyChart"/>
     <script src="../../anychart.min.js"></script>
     <script src="http://cdn.anychart.com/js/latest/data-adapter.min.js" data-export="true"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js" data-export="true"></script>
@@ -57,7 +57,7 @@
 
             var tableData = anychart.data.parseHtmlTable("#table", undefined, undefined, "none");
 
-            chart = anychart.bar();
+            chart = anychart.pareto();
 
             // Set data from HTML table.
             chart.data(tableData);

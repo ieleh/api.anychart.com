@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="x-cat-tags" content="pareto anyChart"/>
+    <script src="../../anychart.min.js"></script>
+    <script x-export="chart">
+        anychart.onDocumentReady(function () {
+            var data = anychart.data.set([
+                {name: "Nail polish", value: 14814},
+                {name: "Eyebrow pencil", value: 13012},
+                {name: "Rouge", value: 16624},
+                {name: "Pomade", value: 8814},
+                {name: "Eyeshadows", value: 12998}
+            ]);
+
+            chart = anychart.pareto();
+
+            chart.data(data);
+
+            // Get data.
+            var currentData = chart.data();
+
+            var newData = currentData.concat([
+                {name: "Eyeliner", value: 17321},
+                {name: "Foundation", value: 10342},
+                {name: "Lip gloss", value: 22998},
+                {name: "Mascara", value: 19261}
+            ]);
+
+            chart.data(newData);
+
+            chart.title("Get and modify data");
+            chart.container("container");
+            chart.draw();
+        });
+    </script>
+</head>
+<body>
+<div id="container" style="width: 100%; height: 100%"></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta name="x-cat-tags" content="pareto crosshair anyChart"/>
+    <meta charset="UTF-8"/>
+    <script src="../../anychart.min.js"></script>
+    <script x-export="chart">
+        anychart.onDocumentReady(function() {
+            chart = anychart.pareto();
+            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+
+            chart.lineMarker(0, {value: 10, axis: chart.yAxis()});
+            chart.lineMarker(1, {value: 20, stroke: "#F44336", axis: chart.yAxis()});
+
+            // Disables first line marker.
+            chart.lineMarker(false);
+
+            chart.title("Disable chart line marker");
+            chart.container("container");
+            chart.draw();
+        });
+    </script>
+</head>
+<body>
+<div id="container" style="width: 100%; height: 100%"></div>
+</body>
+</html>
