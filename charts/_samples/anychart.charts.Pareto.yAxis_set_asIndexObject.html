@@ -8,11 +8,11 @@
             chart = anychart.pareto();
             chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
 
-            // Sets Y-axis settings by index.
+            // Set Y-axis settings by index.
             chart.yAxis(0, {ticks: {stroke: "#42A5F5"}});
             chart.yAxis(1, {stroke: "#42A5F5", title: true});
 
-            chart.title("Set yAxis parameters as object by index");
+            chart.title("Set yAxis parameters as an object by index");
             chart.container("container");
             chart.draw();
         });
