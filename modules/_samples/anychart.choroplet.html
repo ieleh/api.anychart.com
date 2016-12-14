@@ -23,6 +23,8 @@
             australiaMap = anychart.choropleth(dataSetForSeries);
             australiaMap.geoData(anychart.maps.australia);
             australiaMap.geoIdField("code_hasc");
+
+            australiaMap.title("Create a Choropleth Map");
             australiaMap.container("container");
             australiaMap.draw();
         });
