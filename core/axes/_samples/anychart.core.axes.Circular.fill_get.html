@@ -12,9 +12,9 @@
             currentAxis.fill("#9E9E9E");
 
             // Get axis fill.
-            var getFill = currentAxis.fill();
+            var fillSettings = currentAxis.fill();
 
-            chart.title({text: "Get and use axis fill", fontColor: getFill});
+            chart.title({text: "Get and use axis fill", fontColor: fillSettings});
             chart.container("container");
             chart.draw();
         });

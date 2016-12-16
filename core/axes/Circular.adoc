@@ -1,6 +1,6 @@
 /**
  * Circular axis class.
- * {docs:Gauges/Circular_Gauge#axis}Learn more about circular ticks.{docs}
+ * {docs:Gauges/Circular_Gauge#axis}Learn more about circular axis.{docs}
  * @extends {anychart.core.VisualBase}
  * @constructor
  */
@@ -196,7 +196,7 @@ anychart.core.axes.Circular.prototype.ticks;
  * </ul>
  * @example anychart.core.axes.Circular.ticks_set_asBool Disable/Enable ticks
  * @example anychart.core.axes.Circular.ticks_set_asObject Using object
- * @param {(Object|boolean|null)=} opt_value [false] Ticks settings.
+ * @param {(Object|boolean|null)=} opt_value [true] Ticks settings.
  * @return {anychart.core.axes.Circular} Self instance for method chaining.
  */
 anychart.core.axes.Circular.prototype.ticks;
@@ -316,7 +316,7 @@ anychart.core.axes.Circular.prototype.width;
  * @shortDescription Fill settings.
  * @category Coloring
  * @example anychart.core.axes.Circular.fill_get
- * @return {!anychart.graphics.vector.Fill} Current fill color.
+ * @return {!anychart.graphics.vector.Fill} Axis fill color.
  */
 anychart.core.axes.Circular.prototype.fill;
 
@@ -326,7 +326,7 @@ anychart.core.axes.Circular.prototype.fill;
  * {docs:Graphics/Fill_Settings}Learn more about coloring.{docs}
  * @example anychart.core.axes.Circular.fill_set_asString Using string
  * @example anychart.core.axes.Circular.fill_set_asArray Using array
- * @param {(anychart.graphics.vector.Fill|string)} value ["black 0.3"] Color as an object or a string.
+ * @param {(anychart.graphics.vector.Fill|string)} value ["#CECECE"] Color as an object or a string.
  * @return {anychart.core.axes.Circular} Self instance for method chaining.
  */
 anychart.core.axes.Circular.prototype.fill;
@@ -411,7 +411,7 @@ anychart.core.axes.Circular.prototype.overlapMode;
 
 /**
  * Getter for the rounding of corners.
- * @shortDescription The rounding of corners
+ * @shortDescription Rounding of corners
  * @category Specific settings
  * @example anychart.core.axes.Circular.cornersRounding_get
  * @return {string} The radius of corners rounding in percent.
