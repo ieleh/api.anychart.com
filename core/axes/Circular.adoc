@@ -1,5 +1,6 @@
 /**
  * Circular axis class.
+ * {docs:Gauges/Circular_Gauge#axis}Learn more about circular ticks.{docs}
  * @extends {anychart.core.VisualBase}
  * @constructor
  */
@@ -177,7 +178,7 @@ anychart.core.axes.Circular.prototype.minorTicks;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for axis ticks.
+ * Getter for circular ticks.
  * @shortDescription Ticks settings.
  * @category Specific settings
  * @example anychart.core.axes.Circular.ticks_get
@@ -186,8 +187,9 @@ anychart.core.axes.Circular.prototype.minorTicks;
 anychart.core.axes.Circular.prototype.ticks;
 
 /**
- * Setter for axis ticks.
- * @detailed Sets axis ticks settings depending on parameter type:
+ * Setter for circular ticks.
+ * @detailed {docs:Gauges/Circular_Gauge#ticks}Learn more about circular ticks.{docs}<br/>
+ * Sets axis ticks settings depending on parameter type:
  * <ul>
  *   <li><b>null/boolean</b> - disable or enable axis ticks.</li>
  *   <li><b>object</b> - sets axis ticks settings.</li>
