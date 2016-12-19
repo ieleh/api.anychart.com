@@ -428,6 +428,21 @@ anychart.charts.Pareto.prototype.yAxis;
  */
 anychart.charts.Pareto.prototype.getXAxesCount;
 
+
+//----------------------------------------------------------------------------------------------------------------------
+//
+//  anychart.core.Cartesian.prototype.getYAxesCount
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+/**
+ * Returns Y-axes count.
+ * @category Axes and Scales
+ * @return {number} Number of Y-axes.
+ * @since 7.13.0
+ */
+anychart.charts.Pareto.prototype.getYAxesCount;
+
 //----------------------------------------------------------------------------------------------------------------------
 //
 //  anychart.charts.Pareto.prototype.getSeries
