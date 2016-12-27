@@ -138,6 +138,9 @@ anychart.core.axes.Radial.prototype.minorTicks;
  * Getter for the axis stroke.
  * @shortDescription Stroke settings.
  * @category Coloring
+ * @listing See listing
+ * var currentYAxis = chart.yAxis();
+ * var strokeSettings = currentYAxis.stroke();
  * @return {anychart.graphics.vector.Stroke} Axis stroke settings.
  */
 anychart.core.axes.Radial.prototype.stroke;
@@ -146,7 +149,7 @@ anychart.core.axes.Radial.prototype.stroke;
  * Setter for the axis stroke.
  * {docs:Graphics/Stroke_Settings}Learn more about stroke settings.{docs}
  * @example anychart.core.axes.Radial.stroke_set
- * @param {(anychart.graphics.vector.Stroke|anychart.graphics.vector.ColoredFill|string|null)=} opt_value ["#b9b9b9"] Stroke settings.
+ * @param {(anychart.graphics.vector.Stroke|anychart.graphics.vector.ColoredFill|string|null)=} opt_value ["#CECECE"] Stroke settings.
  * @param {number=} opt_thickness [1] Line thickness.
  * @param {string=} opt_dashpattern Controls the pattern of dashes and gaps used to stroke paths.
  * @param {anychart.graphics.vector.StrokeLineJoin=} opt_lineJoin Line joint style.

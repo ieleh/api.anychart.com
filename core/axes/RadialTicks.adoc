@@ -44,6 +44,9 @@ anychart.core.axes.RadialTicks.prototype.length;
  * Getter for ticks stroke.
  * @shortDescription Stroke settings.
  * @category Coloring
+ * @listing
+ * var ticksSettings = currentYAxis.ticks();
+ * var strokeSettings = ticksSettings.stroke();
  * @return {anychart.graphics.vector.Stroke} Returns ticks stroke settings.
  */
 anychart.core.axes.RadialTicks.prototype.stroke;
@@ -52,7 +55,7 @@ anychart.core.axes.RadialTicks.prototype.stroke;
  * Setter for stroke settings via single parameter.<br/>
  * <img src='/anychart.core.axes.RadialTicks.stroke.png' height='66' width='413'/><br/>
  * @example anychart.core.axes.RadialTicks.stroke_set_asSingle
- * @param {(anychart.graphics.vector.Stroke)=} opt_value Stroke style as '[thickness ]color[ opacity]'.
+ * @param {(anychart.graphics.vector.Stroke)=} opt_value ["#CECECE"] Stroke style as '[thickness ]color[ opacity]'.
  * @return {anychart.core.axes.Ticks} Self instance for method chaining.
  */
 anychart.core.axes.RadialTicks.prototype.stroke;
@@ -75,7 +78,11 @@ anychart.core.axes.RadialTicks.prototype.stroke;
  * </ul>
  * <b>Note:</b> String parts order is significant and '3px red' is not the same as 'red 3px'.
  * @example anychart.core.axes.RadialTicks.stroke_set_asSeveral
- * @param {(anychart.graphics.vector.Stroke)=} opt_value ["#b9b9b9"] Fill style as '[thickness ]color[ opacity]'.
+ * @param {string=} opt_value Stroke settings.
+ * @param {number=} opt_thickness [1] Line thickness.
+ * @param {string=} opt_dashpattern Controls the pattern of dashes and gaps used to stroke paths.
+ * @param {anychart.graphics.vector.StrokeLineJoin=} opt_lineJoin Line join style.
+ * @param {anychart.graphics.vector.StrokeLineCap=} opt_lineCap Line cap style.
  * @return {anychart.core.axes.RadialTicks} Self instance for method chaining.
  */
 anychart.core.axes.RadialTicks.prototype.stroke;
