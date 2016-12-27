@@ -6,9 +6,15 @@
     <script x-export="chart">
         anychart.onDocumentReady(function() {
             chart = anychart.polar();
-            chart.line([1.1, 1.6, 1.4, 1.9]);
-            var yAxis = chart.yAxis();
-            yAxis.ticks(false); // disables ticks
+            chart.line([6, 1, 6, 1, 6, 1]);
+            chart.grid(1, false);
+
+            var currentYAxis = chart.yAxis();
+
+            // Disable ticks.
+            currentYAxis.ticks(false);
+
+            chart.title("Disable ticks");
             chart.container("container");
             chart.draw();
         });

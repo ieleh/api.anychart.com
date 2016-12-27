@@ -5,17 +5,17 @@
     <script src="../../../anychart.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function() {
-            chart = anychart.polar();
-            chart.line([6, 1, 6, 1, 6, 1]);
+            chart = anychart.polar([1.1, 1.6, 1.4, 1.9]);
 
             var currentYAxis = chart.yAxis();
 
-            // Set stroke settings.
-            currentYAxis.stroke("#F44336", 2, "5 2", "round");
-
-            chart.title("Set axis stroke parameter as an object");
+            chart.title("Get and modify scale");
             chart.container("container");
             chart.draw();
+
+            // Get scale.
+            var scaleSettings = currentYAxis.scale();
+            scaleSettings.inverted(true);
         });
     </script>
 </head>

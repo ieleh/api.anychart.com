@@ -6,8 +6,13 @@
     <script x-export="chart">
         anychart.onDocumentReady(function() {
             chart = anychart.polar([1.1, 1.6, 1.4, 1.9]);
-            var yAxis = chart.yAxis();
-            yAxis.scale(anychart.scales.log()); // sets scale
+
+            var currentYAxis = chart.yAxis();
+
+            // Set scale.
+            currentYAxis.scale(anychart.scales.log());
+
+            chart.title("Set scale");
             chart.container("container");
             chart.draw();
         });

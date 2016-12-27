@@ -6,9 +6,14 @@
     <script x-export="chart">
         anychart.onDocumentReady(function() {
             chart = anychart.polar();
-            chart.line([1.1, 1.6, 1.4, 1.9]);
-            var yAxis = chart.yAxis();
-            yAxis.drawLastLabel(false); // disables last label
+            chart.line([6, 1, 6, 1, 6, 1]);
+
+            var currentYAxis = chart.yAxis();
+
+            // Disable last label.
+            currentYAxis.drawLastLabel(false);
+
+            chart.title("Disable last label");
             chart.container("container");
             chart.draw();
         });

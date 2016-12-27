@@ -10,10 +10,12 @@
 
             var currentYAxis = chart.yAxis();
 
-            // Set stroke settings.
-            currentYAxis.stroke("#F44336", 2, "5 2", "round");
+            var ticksSettings = currentYAxis.ticks();
 
-            chart.title("Set axis stroke parameter as an object");
+            // Set ticks stroke.
+            ticksSettings.stroke("#F44336", 0.7);
+
+            chart.title("Set ticks stroke via several parameter");
             chart.container("container");
             chart.draw();
         });
