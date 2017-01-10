@@ -23,9 +23,11 @@
 
             var customLineMarker = currentTimeLine.lineMarker();
             customLineMarker.value(951408000000);
-            // Sets stroke settings.
-            customLineMarker.stroke("#F44336", 3, "5 2", "round");
 
+            // Set stroke settings.
+            customLineMarker.stroke("#F44336", 2, "5 2", "round");
+
+            chart.title("Set line marker stroke");
             chart.container("container");
             chart.draw();
             chart.fitAll();

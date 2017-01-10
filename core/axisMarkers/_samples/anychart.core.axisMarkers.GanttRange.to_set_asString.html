@@ -23,9 +23,11 @@
 
             var customRangeMarker = currentTimeLine.rangeMarker();
             customRangeMarker.from("951753600000");
-            // Sets ending value.
+
+            // Set ending value.
             customRangeMarker.to("end");
 
+            chart.title("Set ending value as a string");
             chart.container("container");
             chart.draw();
             chart.fitAll();

@@ -22,9 +22,11 @@
             var currentTimeLine = chart.getTimeline();
 
             var customLineMarker = currentTimeLine.lineMarker();
-            // Sets line marker value.
+
+            // Set line marker value.
             customLineMarker.value(951408000000);
 
+            chart.title("Set line marker value");
             chart.container("container");
             chart.draw();
             chart.fitAll();

@@ -24,9 +24,11 @@
             var customRangeMarker = currentTimeLine.rangeMarker();
             customRangeMarker.from(951408000000);
             customRangeMarker.to(951494400000);
-            // Sets fill settings.
-            customRangeMarker.fill(["#F44336", "#FFEB3B"], 70, null, 0.8);
 
+            // Set fill settings.
+            customRangeMarker.fill(["#00c3ff", "#ffff1c"], 70, null, 0.8);
+
+            chart.title("Set range marker fill as a linear gradient");
             chart.container("container");
             chart.draw();
             chart.fitAll();

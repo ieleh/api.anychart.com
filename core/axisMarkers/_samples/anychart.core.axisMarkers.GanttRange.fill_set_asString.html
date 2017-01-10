@@ -24,9 +24,11 @@
             var customRangeMarker = currentTimeLine.rangeMarker();
             customRangeMarker.from(951408000000);
             customRangeMarker.to(951494400000);
-            // Sets fill settings.
-            customRangeMarker.fill("#90A4AE 0.4");
 
+            // Set fill settings.
+            customRangeMarker.fill("#F44336 0.4");
+
+            chart.title("Set range marker fill parameter as a string");
             chart.container("container");
             chart.draw();
             chart.fitAll();

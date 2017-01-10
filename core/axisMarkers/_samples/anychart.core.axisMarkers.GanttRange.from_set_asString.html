@@ -22,10 +22,12 @@
             var currentTimeLine = chart.getTimeline();
 
             var customRangeMarker = currentTimeLine.rangeMarker();
-            // Sets starting value.
+
+            // Set starting value.
             customRangeMarker.from("start");
             customRangeMarker.to(951408000000);
 
+            chart.title("Set starting value as a string");
             chart.container("container");
             chart.draw();
             chart.fitAll();
