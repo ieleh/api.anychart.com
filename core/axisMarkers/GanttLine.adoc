@@ -15,7 +15,7 @@ anychart.core.axisMarkers.GanttLine;
 /**
  * Getter for the gantt line marker scale.
  * @shortDescription Scale settings.
- * @category Specific settings
+ * @category Axes and Scales
  * @example anychart.core.axisMarkers.GanttLine.scale_get
  * @return {anychart.scales.GanttDateTime} The gantt line marker scale.
  * @since 7.9.0
@@ -23,7 +23,7 @@ anychart.core.axisMarkers.GanttLine;
 anychart.core.axisMarkers.GanttLine.prototype.scale;
 
 /**
- * Setter for the gantt line marker scale.
+ * Setter for the gantt line marker scale.<br/>
  * <b>Note:</b> The scale() method will not work here, only "dateTime" scale are available in Gantt Chart.
  * {docs:Gantt_Chart/Timeline#special_features}Learn more about scale.{docs}
  * @param {anychart.scales.GanttDateTime=} opt_value Scale.
@@ -80,7 +80,7 @@ anychart.core.axisMarkers.GanttLine.prototype.stroke;
  * @listing See listing
  * var currentTimeLine = chart.getTimeline();
  * var customLineMarker = currentTimeLine.lineMarker();
- * customLineMarker.value();
+ * var currentValue = customLineMarker.value();
  * @return {number|anychart.enums.GanttDateTimeMarkers} The gantt line marker value.
  * @since 7.9.0
  */
@@ -117,7 +117,7 @@ anychart.core.axisMarkers.GanttLine.prototype.value;
 anychart.core.axisMarkers.GanttLine.prototype.layout;
 
 /**
- * Setter for the gantt line marker layout.
+ * Setter for the gantt line marker layout.<br/>
  * <b>Note:</b> The layout method will not work here, only "vertical" layout are available in Gantt Chart.
  * @param {(anychart.enums.Layout|string)=} opt_value ["vertical"] Line marker layout.
  * @return {anychart.core.axisMarkers.GanttLine} Self instance for method chaining.
@@ -133,7 +133,7 @@ anychart.core.axisMarkers.GanttLine.prototype.layout;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Whether a line marker has horizontal layout.
+ * Whether a line marker has horizontal layout.<br/>
  * <b>Note:</b> Any type of Gantt diagram will return "false", because markers in Gantts can be only vertical.<br/>
  * Layout is define by {@link anychart.core.axisMarkers.GanttLine#layout} method.
  * @category Size and Position

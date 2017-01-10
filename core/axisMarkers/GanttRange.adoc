@@ -47,7 +47,7 @@ anychart.core.axisMarkers.GanttRange.prototype.layout;
 /**
  * Getter for the gantt range marker scale.
  * @shortDescription Scale settings.
- * @category Specific settings
+ * @category Axes and Scales
  * @listing See listing
  * var currentTimeLine = chart.getTimeline();
  * var customLineMarker = currentTimeLine.lineMarker();
@@ -79,6 +79,11 @@ anychart.core.axisMarkers.GanttRange.prototype.scale;
  * Getter for the range marker fill.
  * @shortDescription Fill settings.
  * @category Coloring
+ * @listing See listing
+ * var customRangeMarker = currentTimeLine.rangeMarker();
+ * customRangeMarker.from(951408000000);
+ * customRangeMarker.to(951494400000);
+ * var fillSettings = customRangeMarker.fill();
  * @return {anychart.graphics.vector.Fill} Range marker settings.
  * @since 7.9.0
  */
@@ -191,7 +196,7 @@ anychart.core.axisMarkers.GanttRange.prototype.from;
  * @listing See listing
  * var currentTimeLine = chart.getTimeline();
  * var customRangeMarker = currentTimeLine.rangeMarker();
- * customRangeMarker.to();
+ * var endingValue = customRangeMarker.to();
  * @return {number|anychart.enums.GanttDateTimeMarkers|string} The ending marker value.
  * @since 7.9.0
  */
@@ -215,7 +220,7 @@ anychart.core.axisMarkers.GanttRange.prototype.to;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Whether a range marker has horizontal layout.
+ * Whether a range marker has horizontal layout.<br/>
  * <b>Note:</b> Any type of Gantt diagram will return "false", because markers in Gantts can be only vertical.<br/>
  * Layout is define by {@link anychart.core.axisMarkers.GanttLine#layout} method.
  * @category Size and Position
