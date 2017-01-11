@@ -24,14 +24,16 @@
 
             var series = australiaMap.choropleth(dataSetForSeries);
 
-            // Set color scale.
-            series.colorScale(anychart.scales.ordinalColor([{less: 30, color: "#EC6E07"}, {
-                from: 30,
-                to: 60,
-                color: "#A1958A"
-            }, {greater: 60, color: "#64B5F6"}]));
+            // Custom linear scale
+            var customColorScale = anychart.scales.linearColor();
+            customColorScale.minimum(10);
+            customColorScale.maximum(100);
+            customColorScale.colors(["#2BC0E4", "#EAECC6"]);
 
-            australiaMap.title("Set color scale");
+            // Set color scale.
+            series.colorScale(customColorScale);
+
+            australiaMap.title("Set color scale using custom colors");
             australiaMap.container("container");
             australiaMap.draw();
         });

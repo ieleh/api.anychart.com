@@ -1090,7 +1090,7 @@ anychart.charts.Cartesian.prototype.getSeriesAt;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Returns series count.
+ * Returns the number of series in a chart.
  * @category Specific Series Settings
  * @example anychart.charts.Cartesian.getSeriesCount
  * @return {number} Number of series.
@@ -2241,7 +2241,7 @@ anychart.charts.Cartesian.prototype.annotations;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Returns X-axes count.
+ * Returns the number of X-axes.
  * @category Axes and Scales
  * @return {number} Number of X-axes.
  * @since 7.11.0
@@ -2255,7 +2255,7 @@ anychart.charts.Cartesian.prototype.getXAxesCount;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Returns Y-axes count.
+ * Returns the number of Y-axes.
  * @category Axes and Scales
  * @return {number} Number of Y-axes.
  * @since 7.11.0

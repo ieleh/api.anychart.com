@@ -661,7 +661,7 @@ anychart.core.Chart.prototype.saveAsXlsx;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Getter for the statistics value by key.
+ * Getter for a statistical value by the key.
  * @category Data
  * @example anychart.core.Chart.getStat
  * @param {(string|anychart.enums.Statistics)} key Key.
