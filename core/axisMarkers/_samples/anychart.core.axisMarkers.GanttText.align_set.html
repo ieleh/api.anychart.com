@@ -21,9 +21,12 @@
 
             var currentTimeLine = chart.getTimeline();
             var customTextMarker = currentTimeLine.textMarker();
-            customTextMarker.value(951580800000);
+            customTextMarker.value(951494400000);
+
             // Set align.
             customTextMarker.align("bottom");
+
+            chart.title("Set text marker align");
             chart.container("container");
             chart.draw();
             chart.fitAll();

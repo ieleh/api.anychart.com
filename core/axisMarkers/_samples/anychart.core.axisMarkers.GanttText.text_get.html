@@ -22,7 +22,7 @@
             var currentTimeLine = chart.getTimeline();
             var customTextMarker = currentTimeLine.textMarker();
             customTextMarker.value(951580800000);
-            customTextMarker.offsetY(45);
+            customTextMarker.offsetY(7);
             customTextMarker.text("Custom");
 
             // Get text.
@@ -30,6 +30,7 @@
 
             customTextMarker.text(currentText + " marker");
 
+            chart.title("Get and modify marker text");
             chart.container("container");
             chart.draw();
             chart.fitAll();

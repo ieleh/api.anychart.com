@@ -21,9 +21,11 @@
 
             var currentTimeLine = chart.getTimeline();
             var customTextMarker = currentTimeLine.textMarker();
-            // Sets value.
+
+            // Set value.
             customTextMarker.value("start");
 
+            chart.title("Set text marker value as a string");
             chart.container("container");
             chart.draw();
             chart.fitAll();

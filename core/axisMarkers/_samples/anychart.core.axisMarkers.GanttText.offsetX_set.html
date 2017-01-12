@@ -23,9 +23,11 @@
 
             var customTextMarker = currentTimeLine.textMarker();
             customTextMarker.value(951580800000);
+
             // Set offset by X.
             customTextMarker.offsetX(70);
 
+            chart.title("Set text marker offset by X");
             chart.container("container");
             chart.draw();
             chart.fitAll();
