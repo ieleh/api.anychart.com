@@ -59,9 +59,9 @@ anychart.core.axisMarkers.GanttText.prototype.scale;
 anychart.core.axisMarkers.GanttText.prototype.layout;
 
 /**
- * Setter for the line marker layout.
+ * Setter for the text marker layout.<br/>
  * <b>Note:</b> The layout method will not work here, only "vertical" layout are available in Gantt Chart.
- * @param {(anychart.enums.Layout|string)=} opt_value ["vertical"] TextMarker layout.
+ * @param {(anychart.enums.Layout|string)=} opt_value ["vertical"] Text marker layout.
  * @return {anychart.core.axisMarkers.GanttText} Self instance for method chaining.
  * @since 7.9.0
  */
@@ -131,7 +131,7 @@ anychart.core.axisMarkers.GanttText.prototype.text;
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
- * Whether a text marker has horizontal layout.
+ * Whether a text marker has horizontal layout.<br/>
  * <b>Note:</b> Any type of Gantt diagram will return "false", because markers in Gantts can be only vertical.<br/>
  * Layout is define by {@link anychart.core.axisMarkers.GanttLine#layout} method.
  * @category Size and Position
