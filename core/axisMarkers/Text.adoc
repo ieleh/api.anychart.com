@@ -15,7 +15,7 @@ anychart.core.axisMarkers.Text;
 /**
  * Getter for the text marker scale.
  * @shortDescription Scale settings.
- * @category Specific settings
+ * @category Axes and Scales
  * @return {anychart.scales.Base} The text marker scale.
  */
 anychart.core.axisMarkers.Text.prototype.scale;
@@ -163,7 +163,7 @@ anychart.core.axisMarkers.Text.prototype.text;
 /**
  * Getter for the text marker value.
  * @shortDescription Text marker value.
- * @category Size and Position
+ * @category Specific settings
  * @listing See listing
  * var textMarkerSettings = chart.textMarker();
  * var currentValue = textMarkerSettings.value();
@@ -308,7 +308,7 @@ anychart.core.axisMarkers.Text.prototype.isHorizontal;
 /**
  * Getter for the text marker axis.
  * @shortDescription Axis settings.
- * @category Specific settings
+ * @category Axes and Scales
  * @example anychart.core.axisMarkers.Text.axis_get
  * @return {anychart.core.axes.Linear} The text marker axis.
  * @since 7.10.0

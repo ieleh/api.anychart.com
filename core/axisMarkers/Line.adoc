@@ -39,7 +39,7 @@ anychart.core.axisMarkers.Line.prototype.layout;
 /**
  * Getter for the line marker scale.
  * @shortDescription Scale settings.
- * @category Specific settings
+ * @category Axes and Scales
  * @return {anychart.scales.Base} The line marker scale.
  */
 anychart.core.axisMarkers.Line.prototype.scale;
@@ -90,7 +90,7 @@ anychart.core.axisMarkers.Line.prototype.stroke;
 
 /**
  * Getter for the line marker value.
- * @shortDescription Value for line marker.
+ * @shortDescription Value settings.
  * @category Specific settings
  * @return {number} Line marker value settings.
  */
@@ -129,7 +129,7 @@ anychart.core.axisMarkers.Line.prototype.isHorizontal;
 /**
  * Getter for the line marker axis.
  * @shortDescription Axis settings.
- * @category Specific settings
+ * @category Axes and Scales
  * @example anychart.core.axisMarkers.Line.axis_get
  * @return {anychart.core.axes.Linear} The line marker axis.
  * @since 7.10.0

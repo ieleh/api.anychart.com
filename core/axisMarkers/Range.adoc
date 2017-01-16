@@ -14,7 +14,7 @@ anychart.core.axisMarkers.Range;
 
 /**
  * Getter for the range marker layout.
- * @shortDescription Range marker layout.
+ * @shortDescription Layout settings.
  * @category Size and Position
  * @example anychart.core.axisMarkers.Range.layout_get
  * @return {anychart.enums.Layout|string} The range marker layout.
@@ -39,7 +39,7 @@ anychart.core.axisMarkers.Range.prototype.layout;
 /**
  * Getter for the range marker scale.
  * @shortDescription Scale settings.
- * @category Specific settings
+ * @category Axes and Scales
  * @return {anychart.scales.Base} The range marker scale.
  */
 anychart.core.axisMarkers.Range.prototype.scale;
@@ -206,7 +206,7 @@ anychart.core.axisMarkers.Range.prototype.isHorizontal;
 /**
  * Getter for the range marker axis.
  * @shortDescription Axis settings.
- * @category Specific settings
+ * @category Axes and Scales
  * @example anychart.core.axisMarkers.Range.axis_get
  * @return {anychart.core.axes.Linear} The range marker axis.
  * @since 7.10.0
