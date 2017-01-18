@@ -3,6 +3,7 @@
     <meta charset="UTF-8"/>
     <meta name="x-cat-tags" content="anyMap"/>
     <script src="../../anychart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js" data-export="true"></script>
     <script src="http://cdn.anychart.com/geodata/1.2.0/countries/canada/canada.js" data-export="true"></script>
     <script src="http://cdn.anychart.com/geodata/1.2.0/custom/world/world.js" data-export="true"></script>
     <script x-export="chart">
@@ -21,10 +22,10 @@
             chart.title("The world map");
 
             chart.listen("drillChange", function() {
-                var path = chart.getCurrentPath();
+                var path = chart.getDrilldownPath();
 
                 // Get parent chart.
-                var parentChart = path[0].getParentChart();
+                var parentChart = path[1].getParentChart();
 
                 var currentTitle = parentChart.title();
 

@@ -3,6 +3,7 @@
   <meta name="x-cat-tags" content="anyMap"/>
     <meta charset="UTF-8"/>
     <script src="../anychart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js" data-export="true"></script>
     <script src="http://cdn.anychart.com/geodata/1.2.0/countries/australia/australia.js" data-export="true"></script>
     <script x-export="australiaMap">
         anychart.onDocumentReady(function() {
@@ -27,7 +28,7 @@
             // Set crs projection.
             australiaMap.crs(anychart.enums.MapProjections.AUGUST);
 
-            australiaMap.title("Set crs projection.");
+            australiaMap.title("Set crs projection");
             australiaMap.container("container");
             australiaMap.draw();
         });
