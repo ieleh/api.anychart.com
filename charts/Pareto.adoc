@@ -71,7 +71,7 @@ anychart.charts.Pareto.prototype.xScale;
  * @shortDescription Y-scale settings.
  * @category Axes and Scales
  * @detailed The Pareto chart calculates the minimum and maximum values for scale automatically.
- * To calculate the minimum and maximum values for the scale do the calculation after draw().
+ * If it is necessary to define custom extreme values it should be done after draw().
  * @example anychart.charts.Pareto.yScale_get
  * @return {!anychart.scales.Base} Default chart scale value.
  * @since 7.13.0
