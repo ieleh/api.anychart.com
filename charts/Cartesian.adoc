@@ -1498,7 +1498,7 @@ anychart.charts.Cartesian.prototype.label;
  * @shortDescription Tooltip settings.
  * @listing See listing.
  * chart.tooltip();
- * @return {!(anychart.core.ui.ChartTooltip|anychart.core.ui.Tooltip)} An instance of the class for method chaining.
+ * @return {!(anychart.core.ui.Tooltip)} An instance of the class for method chaining.
  */
 anychart.charts.Cartesian.prototype.tooltip;
 
