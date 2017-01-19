@@ -432,7 +432,7 @@ anychart.graphics.vector.Stage.prototype.image;
 
 /**
  * Draws rectangle with rounded corners.<br/>
- * Read more at {@link anychart.graphics.vector.primitives.roundedRect}
+ * Read more at {@link anychart.graphics.vector.primitives#roundedRect}
  * @example anychart.graphics.vector.Stage.roundedRect
  */
 anychart.graphics.vector.Stage.prototype.roundedRect;
@@ -460,7 +460,7 @@ anychart.graphics.vector.Stage.prototype.roundedInnerRect;
 
 /**
  * Draws rectangle with truncated corners.<br/>
- * Read more at {@link anychart.graphics.vector.primitives.truncatedRect}
+ * Read more at {@link anychart.graphics.vector.primitives#truncatedRect}
  * @example anychart.graphics.vector.Stage.truncatedRect
  */
 anychart.graphics.vector.Stage.prototype.truncatedRect;
@@ -754,7 +754,7 @@ anychart.graphics.vector.Stage.prototype.pie = function(){};
 
 /**
  * Draws arc as donut chart element.<br/>
- * Read more at {@link anychart.graphics.vector.primitives.#donut}
+ * Read more at {@link anychart.graphics.vector.primitives#donut}
  * @example anychart.graphics.vector.Stage.donut
  */
 anychart.graphics.vector.Stage.prototype.donut = function(){};
@@ -1279,8 +1279,8 @@ anychart.graphics.vector.Stage.prototype.clip;
 
 /**
  * Disposes stage.<br/>
- * @example anychart.graphics.vector.Stage.dispose
  * Removes it from parent layer, nulls links, removes from DOM.
+ * @example anychart.graphics.vector.Stage.dispose
  */
 anychart.graphics.vector.Stage.prototype.dispose = function(){};
 
