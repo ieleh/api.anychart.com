@@ -6,15 +6,22 @@
     <script x-export="chart">
         anychart.onDocumentReady(function () {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ["Nail polish", 14814],
+                ["Eyebrow pencil", 13012],
+                ["Rouge", 16624],
+                ["Pomade", 8814],
+                ["Eyeshadows", 12998],
+                ["Eyeliner", 17321],
+                ["Foundation", 10342],
+                ["Lip gloss", 22998],
+                ["Mascara", 19261]
+            ]);
 
-            // Get series count in loop.
-            for (var i = 0; i < chart.getSeriesCount(); i++) {
-                chart.getSeriesAt(i).name((i + 1)  + " Series");
-            }
+            // Get series count.
+            var count = chart.getSeriesCount();
 
-            chart.legend(true);
-            chart.title("Get and use series count");
+            chart.title("Pareto always generates " + count + " series from the data");
             chart.container("container");
             chart.draw();
         });

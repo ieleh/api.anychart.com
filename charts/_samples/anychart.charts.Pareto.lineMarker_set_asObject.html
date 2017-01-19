@@ -6,10 +6,21 @@
     <script x-export="chart">
         anychart.onDocumentReady(function() {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ["Avalanche", 45],
+                ["Fall", 30],
+                ["Disappearance", 27],
+                ["Exposure", 16],
+                ["Exhaustion", 15],
+                ["Illness", 10]
+            ]);
+
+            chart.yAxis(1).scale().ticks().interval(10);
 
             // Set line marker settings.
-            chart.lineMarker({value: 4, stroke: "#F44336", axis: chart.xAxis()});
+            chart.lineMarker({value: 28.6, stroke: "#F44336", axis: chart.yAxis()});
+
+            chart.lineMarker(1, {value: 80, axis: chart.yAxis(1)});
 
             chart.title("Set chart line marker parameters as an object");
             chart.container("container");

@@ -6,10 +6,19 @@
     <script x-export="chart">
         anychart.onDocumentReady(function() {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ["Avalanche", 45],
+                ["Fall", 30],
+                ["Disappearance", 27],
+                ["Exposure", 16],
+                ["Exhaustion", 15],
+                ["Illness", 10]
+            ]);
 
-            chart.rangeMarker(0, {from: 5, to: 10, fill: "#FF9800 0.5", axis: chart.yAxis()});
-            chart.rangeMarker(1, {from: 15, to: 20, fill: "#4CAF50 0.5", axis: chart.yAxis()});
+            chart.yAxis(1).scale().ticks().interval(10);
+
+            chart.rangeMarker(0, {from: 0, to: 28.6, fill: "#2BC0E4 0.5", axis: chart.yAxis()});
+            chart.rangeMarker(1, {from: 0, to: 80, fill: "#EAECC6 0.5", axis: chart.yAxis(1)});
 
             // Disable first range marker.
             chart.rangeMarker(0, false);

@@ -24,7 +24,6 @@ anychart.charts.Pareto.prototype.data;
 /**
  * Setter for the data.
  * @example anychart.charts.Pareto.data_set_asArray Using an array.
- * @example anychart.charts.Pareto.data_set_asTable Using table data.
  * @example anychart.charts.Pareto.data_set_asCSV Using CSV.
  * @param {(anychart.data.View|anychart.data.Set|anychart.data.TableData|Array|string)=} opt_value Value to set.
  * @param {Object.<string, (string|boolean)>=} opt_csvSettings If CSV string is passed, you can pass CSV parser settings here as a hash map.
@@ -71,6 +70,8 @@ anychart.charts.Pareto.prototype.xScale;
  * Getter for the chart Y-scale.
  * @shortDescription Y-scale settings.
  * @category Axes and Scales
+ * @detailed The Pareto chart calculates the minimum and maximum values for scale automatically.
+ * To calculate the minimum and maximum values for the scale do the calculation after draw().
  * @example anychart.charts.Pareto.yScale_get
  * @return {!anychart.scales.Base} Default chart scale value.
  * @since 7.13.0
@@ -97,7 +98,6 @@ anychart.charts.Pareto.prototype.yScale;
  * Getter for space between bars on the ordinal scale by ratio of bars width.
  * @shortDescription Settings for the space between bars.
  * @category Specific Series Settings
- * @example anychart.charts.Pareto.barsPadding_get
  * @return {number} Bars padding.
  * @since 7.13.0
  */
@@ -106,7 +106,6 @@ anychart.charts.Pareto.prototype.barsPadding;
 /**
  * Setter for space between bars on the ordinal scale by ratio of bars width.</br>
  * <img src='/anychart.charts.Cartesian.barsPadding.png' width='396' height='294'/>
- * @example anychart.charts.Pareto.barsPadding_set
  * @param {number=} opt_value [0.4] Value to set.
  * @return {anychart.charts.Pareto} Self instance for method chaining.
  * @since 7.13.0
@@ -149,7 +148,6 @@ anychart.charts.Pareto.prototype.barGroupsPadding;
  * Getter for crosshair settings.
  * @shortDescription Crosshair settings.
  * @category Interactivity
- * @example anychart.charts.Pareto.crosshair_get
  * @return {anychart.core.ui.Crosshair} Crosshair settings.
  * @since 7.13.0
  */
@@ -162,8 +160,6 @@ anychart.charts.Pareto.prototype.crosshair;
  *   <li><b>null/boolean</b> - disable or enable chart crosshair.</li>
  *   <li><b>object</b> - sets chart crosshair settings.</li>
  * </ul>
- * @example anychart.charts.Pareto.crosshair_set_asBool Disable/enable crosshair.
- * @example anychart.charts.Pareto.crosshair_set_asObj Using object.
  * @param {(Object|boolean|null)=} opt_value [false] Crosshair settings.
  * @return {anychart.charts.Pareto} Self instance for method chaining.
  * @since 7.13.0
@@ -180,7 +176,6 @@ anychart.charts.Pareto.prototype.crosshair;
  * Getter for the maximum size for all bubbles on the charts.
  * @shortDescription The maximum size for all bubbles on the charts.
  * @category Specific Series Settings
- * @example anychart.charts.Pareto.maxBubbleSize_get
  * @return {number|string} The maximum size all of the bubbles.
  * @since 7.13.0
  */
@@ -188,7 +183,6 @@ anychart.charts.Pareto.prototype.maxBubbleSize;
 
 /**
  * Setter for the maximum size for all bubbles on the charts.
- * @example anychart.charts.Pareto.maxBubbleSize_set
  * @param {(number|string)=} opt_value ["20%"] Maximum size to set.
  * @return {anychart.charts.Pareto} Self instance for method chaining.
  * @since 7.13.0
@@ -205,7 +199,6 @@ anychart.charts.Pareto.prototype.maxBubbleSize;
  * Getter for the minimum size for all bubbles on the charts.
  * @shortDescription The minimum size for all bubbles on the charts.
  * @category Specific Series Settings
- * @example anychart.charts.Pareto.minBubbleSize_get
  * @return {number|string} The minimum size of the all bubbles.
  * @since 7.13.0
  */
@@ -213,7 +206,6 @@ anychart.charts.Pareto.prototype.minBubbleSize;
 
 /**
  * Setter for the minimum size for all bubbles on the charts.
- * @example anychart.charts.Pareto.minBubbleSize_set
  * @param {(number|string)=} opt_value ["5%"] Minimum size to set.
  * @return {anychart.charts.Pareto} Self instance for method chaining.
  * @since 7.13.0
@@ -712,7 +704,6 @@ anychart.charts.Pareto.prototype.getType;
  * Getter for the default series type.
  * @shortDescription Default series type.
  * @category Specific Series Settings
- * @example anychart.charts.Pareto.defaultSeriesType_get
  * @return {string|anychart.enums.CartesianSeriesType} Default series type.
  * @since 7.13.0
  */
@@ -720,7 +711,6 @@ anychart.charts.Pareto.prototype.defaultSeriesType;
 
 /**
  * Setter for the series type.
- * @example anychart.charts.Pareto.defaultSeriesType_set
  * @param {(string|anychart.enums.CartesianSeriesType)=} opt_value Default series type.
  * @return {anychart.charts.Pareto} Self instance for method chaining.
  * @since 7.13.0
@@ -736,7 +726,6 @@ anychart.charts.Pareto.prototype.defaultSeriesType;
 /**
  * Adds series to the chart.
  * @category Specific Series Settings
- * @example anychart.charts.Pareto.addSeries
  * @param {...(anychart.data.View|anychart.data.Set|Array)} var_args Chart series data.
  * @return {Array.<anychart.core.cartesian.series.Base>} Array of created series.
  * @since 7.13.0
@@ -784,7 +773,6 @@ anychart.charts.Pareto.prototype.getSeriesCount;
 /**
  * Removes one of series from chart by its id.
  * @category Specific Series Settings
- * @example anychart.charts.Pareto.removeSeries
  * @param {number|string} id Series id.
  * @return {anychart.charts.Pareto} Self instance for method chaining.
  * @since 7.13.0
@@ -800,7 +788,6 @@ anychart.charts.Pareto.prototype.removeSeries;
 /**
  * Removes one of series from chart by its index.
  * @category Specific Series Settings
- * @example anychart.charts.Pareto.removeSeriesAt
  * @param {number} index Series index.
  * @return {anychart.charts.Pareto} Self instance for method chaining.
  * @since 7.13.0
@@ -816,7 +803,6 @@ anychart.charts.Pareto.prototype.removeSeriesAt;
 /**
  * Removes all series from chart.
  * @category Specific Series Settings
- * @example anychart.charts.Pareto.removeAllSeries
  * @return {anychart.charts.Pareto} Self instance for method chaining.
  * @since 7.13.0
  */
@@ -833,7 +819,6 @@ anychart.charts.Pareto.prototype.removeAllSeries;
  * <b>Note:</b> Works only after {@link anychart.charts.Cartesian#draw} is called.
  * @shortDescription Returns data bounds of the chart.
  * @category Size and Position
- * @example anychart.charts.Pareto.getPlotBounds
  * @return {anychart.math.Rect} Data bounds of the chart.
  * @since 7.13.0
  */
@@ -849,7 +834,6 @@ anychart.charts.Pareto.prototype.getPlotBounds;
  * Getter for zoom settings.
  * @shortDescription Zoom settings.
  * @category Interactivity
- * @example anychart.charts.Pareto.xZoom_get
  * @return {anychart.core.utils.OrdinalZoom} Zoom settings.
  * @since 7.13.0
  */
@@ -857,8 +841,6 @@ anychart.charts.Pareto.prototype.xZoom;
 
 /**
  * Setter for the zoom settings.
- * @example anychart.charts.Pareto.xZoom_set_asNum Using number
- * @example anychart.charts.Pareto.xZoom_set_asObj Using object
  * @param {(number|boolean|null|Object)=} opt_value Value to set. If you will pass null, true, false or number less than 1,
  * then value will be converted in 1.
  * @return {anychart.charts.Pareto} Self instance for method chaining.
@@ -876,7 +858,6 @@ anychart.charts.Pareto.prototype.xZoom;
  * Getter for the scroller.
  * @shortDescription Scroller settings.
  * @category Chart Controls
- * @example anychart.charts.Pareto.xScroller_get
  * @return {anychart.core.ui.ChartScroller} Scroller settings.
  * @since 7.13.0
  */
@@ -889,8 +870,6 @@ anychart.charts.Pareto.prototype.xScroller;
  *   <li><b>null/boolean</b> - disable or enable chart scroller.</li>
  *   <li><b>object</b> - sets chart scroller settings.</li>
  * </ul>
- * @example anychart.charts.Pareto.xScroller_set_asBool Disable/Enable scroller
- * @example anychart.charts.Pareto.xScroller_set_asObj Using object
  * @param {(Object|boolean|null)=} opt_value Chart scroller settings.
  * @return {anychart.charts.Pareto} Self instance for method chaining.
  * @since 7.13.0
@@ -907,7 +886,6 @@ anychart.charts.Pareto.prototype.xScroller;
  * Getter for annotations.
  * @shortDescription Creates annotations.
  * @category Specific settings
- * @example anychart.charts.Pareto.annotations_get
  * @return {anychart.core.annotations.PlotController} The plot annotations.
  * @since 7.13.0
  */
@@ -915,7 +893,6 @@ anychart.charts.Pareto.prototype.annotations;
 
 /**
  * Setter for annotations.
- * @example anychart.charts.Pareto.annotations_set
  * @param {Array=} opt_annotationsList Annotations list to set.
  * @return {anychart.charts.Pareto} Self instance for method chaining
  * @since 7.13.0

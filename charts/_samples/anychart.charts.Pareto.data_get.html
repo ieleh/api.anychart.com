@@ -6,11 +6,11 @@
     <script x-export="chart">
         anychart.onDocumentReady(function () {
             var data = anychart.data.set([
-                {name: "Nail polish", value: 14814},
-                {name: "Eyebrow pencil", value: 13012},
-                {name: "Rouge", value: 16624},
-                {name: "Pomade", value: 8814},
-                {name: "Eyeshadows", value: 12998}
+                {x: "Nail polish", value: 14814},
+                {x: "Eyebrow pencil", value: 13012},
+                {x: "Rouge", value: 16624},
+                {x: "Pomade", value: 8814},
+                {x: "Eyeshadows", value: 12998}
             ]);
 
             chart = anychart.pareto();
@@ -21,10 +21,10 @@
             var currentData = chart.data();
 
             var newData = currentData.concat([
-                {name: "Eyeliner", value: 17321},
-                {name: "Foundation", value: 10342},
-                {name: "Lip gloss", value: 22998},
-                {name: "Mascara", value: 19261}
+                {x: "Eyeliner", value: 17321},
+                {x: "Foundation", value: 10342},
+                {x: "Lip gloss", value: 22998},
+                {x: "Mascara", value: 19261}
             ]);
 
             chart.data(newData);

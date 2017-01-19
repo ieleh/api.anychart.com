@@ -6,15 +6,33 @@
     <script x-export="chart">
         anychart.onDocumentReady(function () {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ['Parking Difficult', 95],
+                ['Sales Rep was Rude', 60],
+                ['Poor Lighting', 45],
+                ['Layout Confusing', 37],
+                ['Sizes Limited', 30],
+                ['Clothing Faded', 27],
+                ['Clothing Shrank', 18]
+            ]);
+
+            chart.yAxis(1).scale().ticks().interval(10);
 
             // Get text marker.
-            var currentTextMarker = chart.textMarker();
-            currentTextMarker.value(15);
-            currentTextMarker.anchor("leftBottom");
-            currentTextMarker.axis(chart.yAxis());
+            var leftTextMarker = chart.textMarker();
+            leftTextMarker.value(62.4);
+            leftTextMarker.anchor("leftBottom");
+            leftTextMarker.text("20% Effort");
+            leftTextMarker.axis(chart.yAxis());
 
-            chart.lineMarker({value: 15, axis: chart.yAxis()});
+            var rightTextMarker = chart.textMarker(1);
+            rightTextMarker.value(80);
+            rightTextMarker.anchor("leftBottom");
+            rightTextMarker.text("80% Results");
+            rightTextMarker.axis(chart.yAxis(1));
+
+            chart.lineMarker({value: 62.4, axis: chart.yAxis()});
+            chart.lineMarker(1, {value: 80, axis: chart.yAxis(1)});
             chart.title("Get and modify text marker object");
             chart.container("container");
             chart.draw();

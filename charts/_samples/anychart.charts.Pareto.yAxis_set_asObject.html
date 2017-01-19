@@ -6,10 +6,23 @@
     <script x-export="chart">
         anychart.onDocumentReady(function () {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ["Nail polish", 14814],
+                ["Eyebrow pencil", 13012],
+                ["Rouge", 16624],
+                ["Pomade", 8814],
+                ["Eyeshadows", 12998],
+                ["Eyeliner", 17321],
+                ["Foundation", 10342],
+                ["Lip gloss", 22998],
+                ["Mascara", 19261]
+            ]);
 
             // Set Y-axis settings.
-            chart.yAxis({stroke: "#42A5F5"});
+            chart.yAxis({ticks: {stroke: "#F44336"}, stroke: "#F44336"});
+
+            chart.yAxis(1, {ticks: {stroke: "#42A5F5"}, stroke: "#42A5F5", title: true});
+            chart.yAxis(1).scale().ticks().interval(10);
 
             chart.title("Set yAxis parameter as an object");
             chart.container("container");

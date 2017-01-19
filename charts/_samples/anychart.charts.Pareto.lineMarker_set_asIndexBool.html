@@ -6,15 +6,24 @@
     <script x-export="chart">
         anychart.onDocumentReady(function () {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ["Avalanche", 45],
+                ["Fall", 30],
+                ["Disappearance", 27],
+                ["Exposure", 16],
+                ["Exhaustion", 15],
+                ["Illness", 10]
+            ]);
 
-            chart.textMarker(0, {value: 2, text: "Marker 0", axis: chart.yAxis()});
-            chart.textMarker(1, {value: 15, text: "Marker 1", axis: chart.yAxis()});
+            chart.yAxis(1).scale().ticks().interval(10);
+
+            chart.lineMarker(0, {value: 28.6, axis: chart.yAxis()});
+            chart.lineMarker(1, {value: 80, axis: chart.yAxis(1)});
 
             // Disables first marker by index.
-            chart.textMarker(0, false);
+            chart.lineMarker(0, false);
 
-            chart.title("Disable chart range marker by index");
+            chart.title("Disable chart line marker by index");
             chart.container("container");
             chart.draw();
         });

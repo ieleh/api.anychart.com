@@ -6,10 +6,22 @@
     <script x-export="chart">
         anychart.onDocumentReady(function() {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ["Nail polish", 14814],
+                ["Eyebrow pencil", 13012],
+                ["Rouge", 16624],
+                ["Pomade", 8814],
+                ["Eyeshadows", 12998],
+                ["Eyeliner", 17321],
+                ["Foundation", 10342],
+                ["Lip gloss", 22998],
+                ["Mascara", 19261]
+            ]);
 
             // Set grid settings.
-            chart.grid({axis: chart.yAxis(), evenFill: "#FFFF8D 0.3"});
+            chart.grid({axis: chart.yAxis(0), stroke: "#F44336"});
+
+            chart.grid(1, {axis: chart.yAxis(1), stroke: "#BDBDBD 0.5"});
 
             chart.title("Set chart grid parameters as an object");
             chart.container("container");

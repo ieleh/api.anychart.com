@@ -1,5 +1,5 @@
 /**
- * Creates and returns a Pert Chart.
+ * Creates and returns a Pareto Chart.
  * @category Charts
  * @example anychart.pareto
  * @param {(anychart.data.View|anychart.data.Set|Array)=} opt_data Pareto chart data.

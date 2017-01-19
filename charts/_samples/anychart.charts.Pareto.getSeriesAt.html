@@ -6,11 +6,24 @@
     <script x-export="chart">
         anychart.onDocumentReady(function () {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ["Nail polish", 14814],
+                ["Eyebrow pencil", 13012],
+                ["Rouge", 16624],
+                ["Pomade", 8814],
+                ["Eyeshadows", 12998],
+                ["Eyeliner", 17321],
+                ["Foundation", 10342],
+                ["Lip gloss", 22998],
+                ["Mascara", 19261]
+            ]);
 
             // Get series by index.
-            var series = chart.getSeriesAt(0);
-            series.labels(true);
+            var columnSeries = chart.getSeriesAt(0);
+            columnSeries.name("Column");
+
+            var lineSeries = chart.getSeriesAt(1);
+            lineSeries.name("Line");
 
             chart.title("Get and modify series by index");
             chart.container("container");

@@ -6,13 +6,26 @@
     <script x-export="chart">
         anychart.onDocumentReady(function() {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ["Avalanche", 45],
+                ["Fall", 30],
+                ["Disappearance", 27],
+                ["Exposure", 16],
+                ["Exhaustion", 15],
+                ["Illness", 10]
+            ]);
+
+            chart.yAxis(1).scale().ticks().interval(10);
+
+            var leftLineMarker = chart.lineMarker();
+            leftLineMarker.value(28.6);
+            leftLineMarker.stroke("#A5B3B3", 1, "10 2", "round");
+            leftLineMarker.axis(chart.yAxis());
 
             // Get line marker.
-            var currentLineMarker = chart.lineMarker();
-            currentLineMarker.value(20);
-            currentLineMarker.stroke("2 #F44336");
-            currentLineMarker.axis(chart.yAxis());
+            var rightLineMarker = chart.lineMarker(1);
+            rightLineMarker.value(80);
+            rightLineMarker.axis(chart.yAxis(1));
 
             chart.title("Get and modify line marker object");
             chart.container("container");

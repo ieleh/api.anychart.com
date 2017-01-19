@@ -4,15 +4,16 @@
     <meta charset="UTF-8"/>
     <script src="../../anychart.min.js"></script>
     <script x-export="chart">
-        anychart.onDocumentReady(function() {
+        anychart.onDocumentReady(function () {
             chart = anychart.pareto();
-            chart.data([4, 2, 8]);
-            chart.column([4, 2, 8]);
+            chart.data([
+                ["Nail polish", 14814],
+                ["Eyebrow pencil", 13012],
+                ["Rouge", 16624]
+            ]);
 
-            // Sets the padding between bar groups.
+            // Set the padding between bar groups.
             chart.barGroupsPadding(0);
-            // Sets the padding between bars or columns.
-            // chart.barsPadding(0);
 
             chart.title("Set padding between column or bar groups");
             chart.container("container");

@@ -6,13 +6,28 @@
     <script x-export="chart">
         anychart.onDocumentReady(function () {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ["Avalanche", 45],
+                ["Fall", 30],
+                ["Disappearance", 27],
+                ["Exposure", 16],
+                ["Exhaustion", 15],
+                ["Illness", 10]
+            ]);
+
+            chart.yAxis(1).scale().ticks().interval(10);
 
             // Get range marker.
-            var currentRangeMarker = chart.rangeMarker();
-            currentRangeMarker.from(5);
-            currentRangeMarker.to(15);
-            currentRangeMarker.axis(chart.yAxis());
+            var leftRangeMarker = chart.rangeMarker();
+            leftRangeMarker.from(0);
+            leftRangeMarker.to(28.6);
+            leftRangeMarker.axis(chart.yAxis());
+            leftRangeMarker.fill("#F44336 0.3");
+
+            var rightRangeMarker = chart.rangeMarker(1);
+            rightRangeMarker.from(0);
+            rightRangeMarker.to(80);
+            rightRangeMarker.axis(chart.yAxis(1));
 
             chart.title("Get and modify range marker object");
             chart.container("container");

@@ -6,8 +6,12 @@
     <script x-export="chart">
         anychart.onDocumentReady(function() {
             chart = anychart.pareto();
-            chart.data([4, 2, 8]);
-            chart.column([4, 2, 8]);
+            chart.data([
+                ["Nail polish", 14814],
+                ["Eyebrow pencil", 13012],
+                ["Rouge", 16624]
+            ]);
+            chart.barGroupsPadding(0);
 
             // Get bars groups padding.
             var currentBarsGroupsPadding = chart.barGroupsPadding();

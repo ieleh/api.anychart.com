@@ -6,10 +6,21 @@
     <script x-export="chart">
         anychart.onDocumentReady(function() {
             chart = anychart.pareto();
-            chart.data([10, 4, 17, 20, 16, 35, 6, 15]);
+            chart.data([
+                ["Avalanche", 45],
+                ["Fall", 30],
+                ["Disappearance", 27],
+                ["Exposure", 16],
+                ["Exhaustion", 15],
+                ["Illness", 10]
+            ]);
+
+            chart.yAxis(1).scale().ticks().interval(10);
 
             // Set range marker settings.
-            chart.rangeMarker({from: 5, to: 15, fill: "#F44336 0.2", axis: chart.yAxis()});
+            chart.rangeMarker({from: 0, to: 28.6, fill: "#F44336 0.3", axis: chart.yAxis()});
+
+            chart.rangeMarker(1, {from: 0, to: 80, axis: chart.yAxis(1)});
 
             chart.title("Set chart range marker parameters as an object");
             chart.container("container");
